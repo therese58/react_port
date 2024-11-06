@@ -1,16 +1,23 @@
 import React from 'react';
 import Home from './content/Home';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Utilicon } from './ui/commonui';
+import { Btn } from './ui/commonui';
 
 export default function App() {
   return (
       <div>
         <nav>
           <ul style={{"display":"flex"}}>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/"><Utilicon>Home</Utilicon></Link></li>
+            <li><Link to="/about"><Utilicon fontcolor='red' bgcolor='gray' icon="\f64f" >About</Utilicon></Link></li>
+            <li><Link to="/contact"><Utilicon>Contact</Utilicon></Link></li>
          </ul>
+
+         <Btn>
+            <a href="/about">naver</a>
+            <i className="bi bi-apple"></i>
+         </Btn>
        </nav>
 
        <Routes>
