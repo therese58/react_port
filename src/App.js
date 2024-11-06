@@ -1,8 +1,8 @@
 import React from 'react';
 import Home from './content/Home';
+import About from './content/About';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { Utilicon } from './ui/commonui';
-import { Btn } from './ui/commonui';
+import { Utilicon, Btn } from './ui/commonui';
 
 export default function App() {
   return (
@@ -26,9 +26,7 @@ export default function App() {
           <p>짧은 설명 넣기</p>
         </Home>}></Route>
 
-        <Route path="/about" element={<Home   bgcolor="gray" textcolor="white" vh="100vh" childcolor="red">
-                 자식이라고 합니다. 여기구역은 children이라는 변수로 지정되어 있어요
-        </Home>}></Route>
+        <Route path="/about" element={<About></About>}></Route>
 
         <Route path="/contact" element={<Home   bgcolor="yellow" textcolor="black" vh="100vh" childcolor="black">
               아~~~ 이렇게 해서 하나의 컴포넌트를 가지고 가성비있게 쓰는구나~<br></br>
